@@ -1,0 +1,111 @@
+.blind{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    margin: -1px;
+}
+
+#wrap{
+    overflow: hidden;
+    /* min-width: 1229px; */
+    margin: 0 auto;
+}
+.inner{
+    max-width: 1408px;
+    min-width: 1230px;
+    padding: 0 104px;
+    margin: 0 auto;
+}
+
+.text-area{
+    display: flex;
+    position: relative;
+}
+.text-area .title{
+    font-size: 64px;
+    line-height: 71px;
+    letter-spacing: -0.64px;
+    margin-bottom: 20px;
+}
+.text-area .text{
+    padding-right: 30px;
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: -0.44px;
+    font-weight: bold;
+}
+.link-tag{
+    display: flex;
+    position: relative;
+    align-items: end;
+    padding-bottom: 13px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: normal;
+    letter-spacing: -0.36px;
+}
+.link-tag::after{
+    content: "";
+    position: absolute;
+    bottom: 13px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #000;
+}
+
+#container .search .search-icon, .content1 .content-area .title-wrap .count::after, .apply .icon,
+.main-content .content-area .swiper-2 .prev,
+.main-content .content-area .swiper-2 .next,
+.main-content .content-area .swiper-1 .prev,
+.main-content .content-area .swiper-1 .next,
+#footer .top-area .related-site .icon,
+#header .right-area .nav-list .icon,
+#header .logo{
+    background-image: url(../images/sp.png);
+    background-repeat: no-repeat;
+    background-size: 328px 205px;
+}
+
+@media (max-width:1229px){
+    #header .logo, #header .menu-icon .btn-menu, #header .sub-nav .sub-link .title::after, #header .menu-icon .btn-menu.btn-close, .search-sm .btn-search .search-icon{
+        background-image: url(../images/sp_mo.png);
+        background-size: 195px 181px;
+    }
+}
+@media (max-width:768px){
+    .inner{
+        min-width: 320px;
+        max-width: 1320px;
+        margin: 0;
+        padding: 0;
+    }
+    .content1 .content-area .title-wrap .count::after, .apply .icon{
+        background-image: url(../images/sp_mo.png);
+        background-size: 195px 181px;
+    }
+    .link-tag{
+        font-size: 12px;
+        line-height: 22px;
+        letter-spacing: -0.24px;
+    }
+    .text-area{
+        flex-wrap: wrap;
+        padding: 0 22px;
+    }
+    .text-area .title{
+        margin-bottom: 11px;
+        font-size: 36px;
+        line-height: 50px;
+        letter-spacing: -0.7px;
+    }
+    .text-area .text{
+        padding-right: 20px;
+        margin-bottom: 9px;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: -0.32px;
+    }
+}
